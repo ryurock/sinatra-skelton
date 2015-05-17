@@ -1,6 +1,6 @@
 class HelloController < App::Base
   get '/' do
-    #"Hello World hogehoge"
+    @hoge = 'fuga'
     slim :index
   end
 end
