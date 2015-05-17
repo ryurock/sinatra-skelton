@@ -1,11 +1,11 @@
 require 'sinatra/activerecord'
+
 require 'logger'
 require 'slim'
 
 module App
   class Base < Sinatra::Base
     register Sinatra::ActiveRecordExtension
-
 
     configure :development do
       require 'sinatra/reloader'
@@ -16,6 +16,7 @@ module App
       require 'binding_of_caller'
       use BetterErrors::Middleware
       BetterErrors.application_root = self.root
+      require 'pry'
     end
 
     configure do

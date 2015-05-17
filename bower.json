@@ -1,0 +1,13 @@
+{
+  "name": "sinatra-skelton",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "fingerprintjs2": "https://github.com/Valve/fingerprintjs2.git"
+  }
+}
