@@ -1,0 +1,113 @@
+doctype html
+html lang="en" 
+  head
+    meta charset="utf-8" /
+    title Bootswatch: Flatly
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    link href="/vendor/bower_components/bootswatch/flatly/bootstrap.min.css" rel="stylesheet" /
+    link href="/vendor/bower_components/bootswatch.min.css/index.css" rel="stylesheet" /
+    /! HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+       <script src="/vendor/bower_components/html5shiv/dist/html5shiv.js"></script>
+       <script src="/vendor/bower_components/Respond/dest/respond.min.js"></script>
+
+    javascript:
+       var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23019901-1']);
+        _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+       (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+
+  body
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand href="../"  Bootswatch
+          button.navbar-toggle data-target="#navbar-main" data-toggle="collapse" type="button" 
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li.dropdown
+              a#themes.dropdown-toggle data-toggle="dropdown" href="#" 
+                | Themes
+                span.caret
+              ul.dropdown-menu aria-labelledby="themes" 
+                li
+                  a href="../default/"  Default
+                li.divider
+                li
+                  a href="../cerulean/"  Cerulean
+                li
+                  a href="../cosmo/"  Cosmo
+                li
+                  a href="../cyborg/"  Cyborg
+                li
+                  a href="../darkly/"  Darkly
+                li
+                  a href="../flatly/"  Flatly
+                li
+                  a href="../journal/"  Journal
+                li
+                  a href="../lumen/"  Lumen
+                li
+                  a href="../paper/"  Paper
+                li
+                  a href="../readable/"  Readable
+                li
+                  a href="../sandstone/"  Sandstone
+                li
+                  a href="../simplex/"  Simplex
+                li
+                  a href="../slate/"  Slate
+                li
+                  a href="../spacelab/"  Spacelab
+                li
+                  a href="../superhero/"  Superhero
+                li
+                  a href="../united/"  United
+                li
+                  a href="../yeti/"  Yeti
+            li
+              a href="../help/"  Help
+            li
+              a href="http://news.bootswatch.com"  Blog
+            li.dropdown
+              a#download.dropdown-toggle data-toggle="dropdown" href="#" 
+                | Download
+                span.caret
+              ul.dropdown-menu aria-labelledby="download" 
+                li
+                  a href="./bootstrap.min.css"  bootstrap.min.css
+                li
+                  a href="./bootstrap.css"  bootstrap.css
+                li.divider
+                li
+                  a href="./variables.less"  variables.less
+                li
+                  a href="./bootswatch.less"  bootswatch.less
+                li.divider
+                li
+                  a href="./_variables.scss"  _variables.scss
+                li
+                  a href="./_bootswatch.scss"  _bootswatch.scss
+          ul.nav.navbar-nav.navbar-right
+            li
+              a href="http://builtwithbootstrap.com/" target="_blank"  Built With Bootstrap
+            li
+              a href="https://wrapbootstrap.com/?ref=bsw" target="_blank"  WrapBootstrap
+
+    div class="container"
+      == yield
+    script src="/vendor/bower_components/jquery/dist/jquery.min.js"
+    script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.min.js"
+    script src="/vendor/bower_components/bootswatch.js/index.js"
+
