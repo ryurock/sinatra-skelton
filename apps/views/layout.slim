@@ -106,8 +106,58 @@ html lang="en"
               a href="https://wrapbootstrap.com/?ref=bsw" target="_blank"  WrapBootstrap
 
     div class="container"
+
       == yield
+
+      footer
+        .row
+          .col-lg-12
+            ul.list-unstyled
+              li.pull-right
+                a[href="#top"]
+                  | Back to top
+              li
+                a[href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;"]
+                  | Blog
+              li
+                a[href="http://feeds.feedburner.com/bootswatch"]
+                  | RSS
+              li
+                a[href="https://twitter.com/bootswatch"]
+                  | Twitter
+              li
+                a[href="https://github.com/thomaspark/bootswatch/"]
+                  | GitHub
+              li
+                a[href="../help/#api"]
+                  | API
+              li
+                a[href="../help/#support"]
+                  | Support
+            p
+              | Made by 
+              a[href="http://thomaspark.co" rel="nofollow"]
+                | Thomas Park
+              | . Contact him at 
+              a[href="mailto:thomas@bootswatch.com"]
+                | thomas@bootswatch.com
+              | .
+            p
+              | Code released under the 
+              a[href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE"]
+                | MIT License
+              | .
+            p
+              | Based on 
+              a[href="http://getbootstrap.com" rel="nofollow"]
+                | Bootstrap
+              | . Icons from 
+              a[href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow"]
+                | Font Awesome
+              | . Web fonts from 
+              a[href="http://www.google.com/webfonts" rel="nofollow"]
+                | Google
+              | .
     script src="/vendor/bower_components/jquery/dist/jquery.min.js"
     script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.min.js"
     script src="/vendor/bower_components/bootswatch.js/index.js"
-
