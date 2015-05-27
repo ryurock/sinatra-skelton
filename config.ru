@@ -4,9 +4,11 @@ require 'bundler/setup'
 require 'sinatra/base'
 require 'app/base'
 
-require './apps/controllers/hello_controller'
+require './apps/controllers/default_controller'
+require './apps/controllers/debug_controller'
 ROUTES = {
-  '/' => HelloController
+  '/debug' => DebugController,
+  '/' => DefaultController
 }
 
 
