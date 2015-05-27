@@ -1,4 +1,5 @@
 require 'sinatra/activerecord'
+require 'sinatra/r18n'
 
 require 'logger'
 require 'slim'
@@ -20,6 +21,7 @@ module App
     end
 
     configure do
+      register Sinatra::R18n
       set :root, File.dirname(__FILE__) + '/../../../'
       set :views, self.root + 'apps/views'
 
