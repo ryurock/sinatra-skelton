@@ -16,7 +16,8 @@ module App
       require 'better_errors'
       require 'binding_of_caller'
       use BetterErrors::Middleware
-      BetterErrors.application_root = self.root
+      BetterErrors.application_root = __dir__
+      BetterErrors::Middleware.allow_ip! "192.168.59.3"
       require 'pry'
     end
 
