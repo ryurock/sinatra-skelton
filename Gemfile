@@ -10,6 +10,9 @@ gem 'activerecord', '~> 3.0'
 # database
 gem 'mysql2'
 
+#i18n
+gem 'sinatra-r18n'
+
 gem 'rake'
 gem 'foreman'
 # template engine

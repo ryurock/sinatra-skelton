@@ -38,6 +38,7 @@ GEM
       slop (~> 3.4)
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
+    r18n-core (2.0.4)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
@@ -58,6 +59,9 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
+    sinatra-r18n (2.0.4)
+      r18n-core (= 2.0.4)
+      sinatra (>= 1.3)
     slim (3.0.3)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -87,5 +91,6 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sinatra-contrib
+  sinatra-r18n
   slim
   thin
