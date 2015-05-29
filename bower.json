@@ -12,7 +12,7 @@
     "bootswatch.min.css": "https://raw.githubusercontent.com/thomaspark/bootswatch/gh-pages/assets/css/bootswatch.min.css",
     "html5shiv": "~3.7.2",
     "Respond": "~1.4.2",
-    "bootswatch": "~3.3.4+1"
+    "bootswatch": "~3.3.4"
   },
   "devDependencies": {}
 }
