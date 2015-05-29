@@ -6,6 +6,7 @@ my sinatra application skelton repos
 
 * [bundler](http://bundler.io/)
 * [bower](http://bower.io/)
+* mysql-devel
 
 ## Quick Start
 
