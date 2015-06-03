@@ -1,2 +1,10 @@
 site:
   title: 'Sinatra ベーススケルトン thema by Bootswatch Flatly'
+  signup_username_place_holder: 'ユーザー名'
+  signup_email_place_holder: 'あなたのメールアドレス'
+  signup_password_place_holder: 'パスワード'
+  signup_btn: 'Sinatra-Skeltonのアカウントを作成'
+  default:
+    default_login_h1: 'Sinatra スケルトン'
+    default_login_h2: 'サブキャッチコピー'
+    default_login_h3: '詳細説明がはいります'

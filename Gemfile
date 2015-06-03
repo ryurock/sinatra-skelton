@@ -12,6 +12,8 @@ gem 'mysql2'
 
 #i18n
 gem 'sinatra-r18n'
+# authentication
+gem 'warden'
 
 gem 'rake'
 gem 'foreman'
@@ -26,4 +28,5 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry'
   gem 'pry-nav'
+  gem "pry-remote"
 end

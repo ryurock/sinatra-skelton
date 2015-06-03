@@ -1,2 +1,10 @@
 site:
   title: 'Sinatra-Skelton thema by Bootswatch Flatly'
+  signup_username_place_holder: 'Pick a username'
+  signup_email_place_holder: 'Your Email'
+  signup_password_place_holder: 'Create a Password'
+  signup_btn: 'Sign up for Sinatra-Skelton'
+  default:
+    default_login_h1: 'Sinatra-Skelton'
+    default_login_h2: 'sub catch copy'
+    default_login_h3: 'Powerful collaboration, code review, and code management for open source and private projects. Need private repositories?'

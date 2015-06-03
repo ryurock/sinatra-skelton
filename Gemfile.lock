@@ -38,6 +38,9 @@ GEM
       slop (~> 3.4)
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
+    pry-remote (0.1.8)
+      pry (~> 0.9)
+      slop (~> 3.0)
     r18n-core (2.0.4)
     rack (1.6.1)
     rack-protection (1.5.3)
@@ -74,6 +77,8 @@ GEM
     thor (0.19.1)
     tilt (1.4.1)
     tzinfo (0.3.44)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -87,6 +92,7 @@ DEPENDENCIES
   mysql2
   pry
   pry-nav
+  pry-remote
   rake
   sinatra
   sinatra-activerecord
@@ -94,3 +100,4 @@ DEPENDENCIES
   sinatra-r18n
   slim
   thin
+  warden

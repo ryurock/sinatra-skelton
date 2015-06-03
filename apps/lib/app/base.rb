@@ -3,6 +3,7 @@ require 'sinatra/r18n'
 
 require 'logger'
 require 'slim'
+require 'warden'
 
 module App
   class Base < Sinatra::Base
@@ -35,5 +36,9 @@ module App
 
       use ::Rack::CommonLogger, access_logger
     end
+
+    enable :sessions
+    #auth setting (warden)
+    use Rack::Session::Cookie, secret: "IdoNotHaveAnySecret"
   end
 end

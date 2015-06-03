@@ -42,3 +42,36 @@ web server start
 ```
 rackup --host 0.0.0.0
 ```
+
+## Dev Tips
+
+### Using to [pry-remote](https://github.com/Mon-Ouie/pry-remote)
+
+#### install 
+
+install [pry-remmote](https://github.com/Mon-Ouie/pry-remote)
+
+```
+gem install pry-reomote
+```
+
+#### write breakpoint
+
+break point pry writting
+
+```
+binding.remote_pry
+```
+
+#### sinatra Rack server Start
+
+```
+rackup --host 0.0.0.0
+```
+
+#### other console type ``` pry-remote ```
+
+open pry-retemo window
+
+
+
