@@ -2,7 +2,7 @@
 
 class AuthController < App::Base
   use Rack::Session::Cookie, secret: "IdoNotHaveAnySecret"
-  #use Rack::Flash, accessorize: [:error, :success]
+  use Rack::Flash, accessorize: [:error, :success]
 
   use Warden::Manager do |config|
     # serialize user to session ->
@@ -27,6 +27,10 @@ class AuthController < App::Base
    end
 
   Warden::Strategies.add(:password) do
+    def flash
+      env['x-rack.flash']
+    end
+
     def valid?
       params["email"] && params["password"]
     end
@@ -38,6 +42,7 @@ class AuthController < App::Base
           :name     => params["username"],
           :password => params["password"]
         }
+        flash.success = "Logged in"
         success!(user)
       else
         # ユーザー名とパスワードのどちらかでも間違っていたら

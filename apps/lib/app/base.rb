@@ -1,3 +1,4 @@
+require 'rack-flash'
 require 'sinatra/activerecord'
 require 'sinatra/r18n'
 

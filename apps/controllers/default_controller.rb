@@ -6,7 +6,6 @@ class DefaultController < App::Base
     #if request.env["warden"].user.nil?
     #  slim :index
     #end
-    #binding.remote_pry
 
   end
 end

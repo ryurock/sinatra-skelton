@@ -43,6 +43,8 @@ GEM
       slop (~> 3.0)
     r18n-core (2.0.4)
     rack (1.6.1)
+    rack-flash3 (1.0.5)
+      rack
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -93,6 +95,7 @@ DEPENDENCIES
   pry
   pry-nav
   pry-remote
+  rack-flash3
   rake
   sinatra
   sinatra-activerecord

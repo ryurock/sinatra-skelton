@@ -7,6 +7,8 @@ gem 'sinatra-activerecord', require: 'sinatra/activerecord'
 gem 'activesupport'
 gem 'activerecord', '~> 3.0'
 
+gem 'rack-flash3'
+
 # database
 gem 'mysql2'
 
