@@ -12,10 +12,12 @@ gem 'rack-flash3'
 # database
 gem 'mysql2'
 
-#i18n
+#sinatra i18n
 gem 'sinatra-r18n'
-# authentication
-gem 'warden'
+#sinatra flush-message
+gem 'sinatra-flash'
+# bcrypt
+gem 'bcrypt-ruby', '~> 3.0.1'
 
 gem 'rake'
 gem 'foreman'

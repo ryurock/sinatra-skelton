@@ -4,7 +4,15 @@ site:
   signup_email_place_holder: 'あなたのメールアドレス'
   signup_password_place_holder: 'パスワード'
   signup_btn: 'Sinatra-Skeltonのアカウントを作成'
+
+  # top page /
   default:
     default_login_h1: 'Sinatra スケルトン'
     default_login_h2: 'サブキャッチコピー'
     default_login_h3: '詳細説明がはいります'
+
+  # auth/join
+  auth:
+    join:
+      validate:
+        error: '入力された値が正しくありません'

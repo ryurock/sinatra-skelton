@@ -4,7 +4,7 @@ require 'sinatra/r18n'
 
 require 'logger'
 require 'slim'
-require 'warden'
+require 'bcrypt'
 
 module App
   class Base < Sinatra::Base
@@ -24,7 +24,6 @@ module App
     end
 
     configure do
-      register Sinatra::R18n
       set :root, File.dirname(__FILE__) + '/../../../'
       set :views, self.root + 'apps/views'
 
@@ -38,8 +37,11 @@ module App
       use ::Rack::CommonLogger, access_logger
     end
 
+    #国際化モジュールの設定
+    register Sinatra::R18n
+    include R18n::Helpers
+
     enable :sessions
-    #auth setting (warden)
-    use Rack::Session::Cookie, secret: "IdoNotHaveAnySecret"
+    use Rack::Flash
   end
 end

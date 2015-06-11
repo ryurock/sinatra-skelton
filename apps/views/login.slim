@@ -2,6 +2,9 @@
   .col-lg-4.col-lg-offset-4
     .well
       form.form-horizontal method="post" action="/auth/join"
+        .alert.alert-dismissible.alert-danger
+          button.close type="button" data-dismiss="alert" ×
+          | #{{@errors[:error]}}
         fieldset
           .form-group
             div.col-lg-12

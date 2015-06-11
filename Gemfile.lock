@@ -14,6 +14,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.3)
     backports (3.6.4)
+    bcrypt-ruby (3.0.1)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -64,6 +65,8 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sinatra-r18n (2.0.4)
       r18n-core (= 2.0.4)
       sinatra (>= 1.3)
@@ -79,8 +82,6 @@ GEM
     thor (0.19.1)
     tilt (1.4.1)
     tzinfo (0.3.44)
-    warden (1.2.3)
-      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -88,6 +89,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 3.0)
   activesupport
+  bcrypt-ruby (~> 3.0.1)
   better_errors
   binding_of_caller
   foreman
@@ -100,7 +102,7 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sinatra-contrib
+  sinatra-flash
   sinatra-r18n
   slim
   thin
-  warden
