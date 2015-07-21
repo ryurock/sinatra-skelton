@@ -25,8 +25,11 @@ GEM
     coderay (1.1.0)
     daemons (1.2.2)
     debug_inspector (0.0.2)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.7)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
     foreman (0.78.0)
       thor (~> 0.19.1)
     i18n (0.7.0)
@@ -42,8 +45,9 @@ GEM
     pry-remote (0.1.8)
       pry (~> 0.9)
       slop (~> 3.0)
-    r18n-core (2.0.4)
     rack (1.6.1)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
     rack-flash3 (1.0.5)
       rack
     rack-protection (1.5.3)
@@ -51,6 +55,19 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (10.4.2)
+    rspec (3.3.0)
+      rspec-core (~> 3.3.0)
+      rspec-expectations (~> 3.3.0)
+      rspec-mocks (~> 3.3.0)
+    rspec-core (3.3.2)
+      rspec-support (~> 3.3.0)
+    rspec-expectations (3.3.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-mocks (3.3.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.3.0)
+    rspec-support (3.3.0)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -67,9 +84,6 @@ GEM
       tilt (~> 1.3)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
-    sinatra-r18n (2.0.4)
-      r18n-core (= 2.0.4)
-      sinatra (>= 1.3)
     slim (3.0.3)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -92,17 +106,19 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.1)
   better_errors
   binding_of_caller
+  factory_girl
   foreman
   mysql2
   pry
   pry-nav
   pry-remote
+  rack-contrib
   rack-flash3
   rake
+  rspec
   sinatra
   sinatra-activerecord
   sinatra-contrib
   sinatra-flash
-  sinatra-r18n
   slim
   thin

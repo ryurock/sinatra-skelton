@@ -8,12 +8,11 @@ gem 'activesupport'
 gem 'activerecord', '~> 3.0'
 
 gem 'rack-flash3'
+gem 'rack-contrib'
 
 # database
 gem 'mysql2'
 
-#sinatra i18n
-gem 'sinatra-r18n'
 #sinatra flush-message
 gem 'sinatra-flash'
 # bcrypt
@@ -33,4 +32,6 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem "pry-remote"
+  gem 'factory_girl'
+  gem 'rspec'
 end

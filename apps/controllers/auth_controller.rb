@@ -2,13 +2,13 @@ require './apps/models/user'
 
 class AuthController < App::Base
   post '/join' do
-    @users = User.new(name: params['username'], email: params['email'], password: params['password'], password_confirmation: params['password'])
-    @users.save
-    if @users.invalid?
-      flash[:error] = t.site.auth.join.validate.error
-      @errors = flash
+    @user = User.create(name: params['username'], email: params['email'], password: params['password'], password_confirmation: params['password'])
+    if @user.invalid?
+      @errors = @user.errors.messages
       return slim :login
     end
+
+    redirect '/'
   end
 
 

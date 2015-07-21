@@ -6,3 +6,11 @@ development:
   password: root
   port: 3306
   encoding: utf8
+test:
+  adapter: mysql2
+  database: test_sinatra_sample
+  host: 127.0.0.1
+  username: root
+  password: root
+  port: 3306
+  encoding: utf8

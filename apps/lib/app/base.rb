@@ -1,6 +1,9 @@
 require 'rack-flash'
+require 'rack/contrib'
+
 require 'sinatra/activerecord'
-require 'sinatra/r18n'
+require 'i18n'
+require 'i18n/backend/fallbacks'
 
 require 'logger'
 require 'slim'
@@ -14,6 +17,11 @@ module App
       require 'sinatra/reloader'
       #変更があった場合にサーバーをリロードする
       register Sinatra::Reloader
+      also_reload 'app/**/*.rb'
+      also_reload 'lib/**/*.rb'
+      also_reload 'conf/**/*.rb'
+
+      set :raise_errors, true
 
       require 'better_errors'
       require 'binding_of_caller'
@@ -35,13 +43,25 @@ module App
       error_logger.sync = true
 
       use ::Rack::CommonLogger, access_logger
+
+      # i18n
+      I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
+      I18n.load_path += Dir[File.join(settings.root + 'config/', 'locales', '*.yml')]
+
+      I18n.backend.load_translations
+      I18n.available_locales = [:en, :ja]
+      I18n.enforce_available_locales = true
+      I18n.default_locale = :ja
     end
 
-    #国際化モジュールの設定
-    register Sinatra::R18n
-    include R18n::Helpers
+    use Rack::Locale
 
     enable :sessions
     use Rack::Flash
+
+    before '/:locale/*' do
+      I18n.locale       =       params[:locale]
+      request.path_info = '/' + params[:splat ][0]
+    end
   end
 end
