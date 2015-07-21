@@ -1,4 +1,4 @@
-require 'app/base'
+require './apps/lib/app/base'
 
 module App
 end

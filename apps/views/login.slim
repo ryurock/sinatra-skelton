@@ -1,0 +1,28 @@
+.row
+  .col-lg-4.col-lg-offset-4
+    .well
+      form.form-horizontal method="post" action="/auth/join"
+        / エラーが存在する場合はalertのboxを表示
+        - unless @errors.blank?
+          .alert.alert-dismissible.alert-warning
+            button.close type="button" data-dismiss="alert" ×
+            ul
+            - @errors.each do |key, val|
+              - attribute = "activerecord.attributes.user." + key.to_s
+              li #{{I18n.t(attribute)}}#{{val.shift}}
+
+        fieldset
+          .form-group
+            div.col-lg-12
+              input.form-control#inputUsername placeholder="#{{I18n.t("site.signup_username_place_holder")}}" type="text" autocomplete="off" name="username" value="#{{params['username']}}"
+          .form-group
+            div.col-lg-12
+              input.form-control#inputEmail placeholder="#{{I18n.t("site.signup_email_place_holder")}}" type="text" autocomplete="off" name="email" value="#{{params['email']}}"
+          .form-group
+            div.col-lg-12
+              input.form-control#inputPassword placeholder="#{{I18n.t("site.signup_password_place_holder")}}" type="password" autocomplete="off" name="password" value="#{{params['password']}}"
+          .form-group
+            div.col-lg-12
+              button.btn.btn-success.btn-block type="submit"
+                | #{{I18n.t("site.signup_btn")}}
+

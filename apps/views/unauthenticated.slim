@@ -1,0 +1,25 @@
+.bs-component
+  .jumbotron.default_login
+    .row
+      .col-lg-8
+        h1 #{{t.site.default.default_login_h1}}
+        h2 #{{t.site.default.default_login_h2}}
+        h3 #{{t.site.default.default_login_h3}}
+      .col-lg-4
+        .well.bs-component
+          form.form-horizontal method="post" action="/auth/join"
+            fieldset
+              .form-group
+                div.col-lg-12
+                  input.form-control#inputUsername placeholder="#{{t.site.signup_username_place_holder}}" type="text" autocomplete="off" name="username"
+              .form-group
+                div.col-lg-12
+                  input.form-control#inputEmail placeholder="#{{t.site.signup_email_place_holder}}" type="text" autocomplete="off" name="email"
+              .form-group
+                div.col-lg-12
+                  input.form-control#inputPassword placeholder="#{{t.site.signup_password_place_holder}}" type="password" autocomplete="off" name="password"
+              .form-group
+                div.col-lg-12
+                  button.btn.btn-success.btn-block type="submit"
+                    | #{{t.site.signup_btn}}
+
